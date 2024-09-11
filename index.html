@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Initiator</title>
+</head>
+<body>
+    <h1>Initiate a Call</h1>
+    <form action="/" method="POST">
+        <label for="phone_number">Enter Phone Number:</label>
+        <input type="text" id="phone_number" name="phone_number" placeholder="e.g. +917268880011" required>
+        <br><br>
+        <button type="submit">Initiate Call</button>
+    </form>
+
+    {% if from_number %}
+        <h2>Call Initiated!</h2>
+        <p>From: {{ from_number }}</p>
+        <p>Ignore Spam Message</p>
+    {% endif %}
+</body>
+</html>
